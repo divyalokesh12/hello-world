@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - msauditwebapp
+name: Build and deploy JAR app to Azure Web App - msauditwebapp
 
 on:
   push:
@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'msauditwebapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b75d293ab3ca4e868c0bc2a147f15475 }}
-        package: '${{ github.workspace }}/target/*.war'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f51b31aec85b45ddb4fa49ef9adede32 }}
+        package: '${{ github.workspace }}/target/*.jar'
