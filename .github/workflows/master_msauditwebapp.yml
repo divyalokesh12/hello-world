@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'msauditwebapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f51b31aec85b45ddb4fa49ef9adede32 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cbdd801cb017442abc0166db420c24c7 }}
         package: '${{ github.workspace }}/target/*.jar'
